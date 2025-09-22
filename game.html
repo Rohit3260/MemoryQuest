@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>MemoryQuest</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="game-container">
+      <h1>MemoryQuest</h1>
+
+      <button id="backHome">Back to Home</button>
+
+      <div class="stats">
+        <p>Score: <span id="score">0</span></p>
+        <p>Total Guesses: <span id="guesses">0</span></p>
+        <p>Accuracy: <span id="accuracy">0</span>%</p>
+        <p>Time: <span id="time">0</span> sec</p>
+        <p>Streak: <span id="streak">0</span></p>
+      </div>
+
+      <ul class="cards"></ul>
+
+      <div id="result" class="result" style="display: none">
+        <h2>Game Over!</h2>
+        <p>Score: <span id="finalScore"></span></p>
+        <p>Total Guesses: <span id="finalGuesses"></span></p>
+        <p>Accuracy: <span id="finalAccuracy"></span>%</p>
+        <p>Time: <span id="finalTime"></span> sec</p>
+        <button id="playAgain">Play Again</button>
+      </div>
+
+      <button id="restart">Restart Game</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: lightblue;
+}
+
+.game-container {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 5px 15px gray;
+  text-align: center;
+}
+
+.mode-select label {
+  margin: 0 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: lightgreen;
+  border: none;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: green;
+  color: white;
+}
+
+.cards {
+  padding: 0;
+  margin: 20px auto 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 400px;
+}
+
+.card {
+  width: calc(25% - 10px);
+  height: 80px;
+  margin-bottom: 10px;
+  position: relative;
+  perspective: 600px;
+  cursor: pointer;
+}
+
+.card .front,
+.card .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid gray;
+  transition: transform 0.5s;
+}
+
+.card .front {
+  background-color: lightgray;
+}
+
+.card .back {
+  background-color: white;
+  transform: rotateY(180deg);
+}
+
+.card.flip .front {
+  transform: rotateY(180deg);
+}
+
+.card.flip .back {
+  transform: rotateY(0);
+}
+
+.card .front img,
+.card .back img {
+  max-width: 70%;
+  max-height: 70%;
+}
+
+.stats p {
+  margin: 5px 0;
+}
+
+.result {
+  margin-top: 20px;
+  border-top: 1px solid gray;
+  padding-top: 10px;
+}
+
+@media screen and (max-width: 500px) {
+  .cards {
+    width: 300px;
+  }
+  .card {
+    height: 60px;
+  }
+}

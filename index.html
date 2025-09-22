@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>MemoryQuest - Home</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="game-container">
+      <h1>MemoryQuest</h1>
+      <p>Select Mode:</p>
+
+      <div class="mode-select">
+        <label>
+          <input type="radio" name="mode" value="easy" checked /> Easy Mode
+        </label>
+        <label>
+          <input type="radio" name="mode" value="standard" /> Standard Mode
+        </label>
+      </div>
+
+      <button id="startGame">Start Game</button>
+    </div>
+
+    <script>
+      const startBtn = document.getElementById("startGame");
+      startBtn.addEventListener("click", () => {
+        const mode = document.querySelector('input[name="mode"]:checked').value;
+        window.location.href = `game.html?mode=${mode}`;
+      });
+    </script>
+  </body>
+</html>
